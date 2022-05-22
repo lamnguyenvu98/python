@@ -1,9 +1,10 @@
 from typing import List
 
 class ListNode():
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, next=None, carry=0):
         self.val = val
         self.next = next
+        self.carry = carry
 
 def insertNode(lst: List):
     head = ListNode()
@@ -46,6 +47,23 @@ def addTwoNumbers(l1: List, l2: List):
     
     res = NodetoList(head_res.next)
     return res
+
+# def addTwoNumberReverse(l1: List, l2: List):
+#     head_l1 = insertNode(l1)
+#     head_l2 = insertNode(l2)
+    
+#     head_res = ListNode()
+#     curr = head_res
+    
+#     while head_l1 or head_l2:
+#         v1 = head_l1.val
+#         v2 = head_l2.val
+        
+#         s = v1 + v2
+#         carry = s // 10
+#         s = s % 10
+#         curr.next = ListNode(s, carry=carry)
+        
 
 l1 = [1, 2, 4]
 l2 = [4, 5, 6]
