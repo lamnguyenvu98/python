@@ -69,5 +69,3 @@ searchWord = "m"
 res = Solution().suggestedProducts(products, searchWord)
 
 print(res)
-
-
